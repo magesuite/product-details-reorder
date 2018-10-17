@@ -29,7 +29,7 @@ class ReorderDetailPageSections
             $sortOrder = $block->getSortOrder();
             $result[$block->getNameInLayout()] = $sortOrder ? (int)$sortOrder : 10;
 
-            if (is_null($sortOrder)) {
+            if (!is_null($sortOrder)) {
                 $blocksWithSortOrderExist = true;
             }
         }
